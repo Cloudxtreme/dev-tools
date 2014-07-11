@@ -1,0 +1,11 @@
+#git clone git@github.com:skate056/studs.git
+git clone --no-hardlinks git@github.com:skate056/studs.git
+git filter-branch --subdirectory-filter rock-paper-scissors/
+git remote rm origin
+git update-ref -d refs/original/refs/heads/master
+git reflog expire --expire=now --all
+git repack -ad
+git remote add origin git@github.com:skate056/rock-paper-scissors.git
+git commit -am 'Moving rock paper scissors to different repository https://github.com/skate056/rock-paper-scissors'
+git push -u origin master
+

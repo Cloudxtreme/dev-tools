@@ -1,0 +1,8 @@
+# Create the local rel-2.6 pointing to the remote branch
+git checkout -b rel-2.6 origin/REL_BRANCH-2.6
+# Change to 2.6 branch
+git checkout rel-2.6
+# Pick commit from master to branch
+git cherry-pick 1309fd06b0abf4bae5754806f1afd39c727c5869
+# Push changes from local branch rel-2.6 to remote REL_BRANCH_2.6
+git push origin rel-2.6:REL_BRANCH-2.6

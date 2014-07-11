@@ -1,0 +1,41 @@
+1055  vim /home/dev/infrastructure/endeavour-application/endeavour-member-repository/src/test/java/com/ga/endeavour/member/matcher/
+ 1056  mvn clean install -DskipTests -DskipRpm
+ 1057  mvn clean install
+ 1058  gits
+ 1059  git log
+ 1060  git pull
+ 1061  mvn clean install
+ 1062  gits
+ 1063  git pull
+ 1064  gits
+ 1065  git log
+ 1066  git checkout master
+ 1067  git log 
+ 1068  git log
+ 1069  gits
+ 1070  git revert
+ 1071  git checkout endeavour-member-repository/pom.xml
+ 1072  gits
+ 1073  git log
+ 1074  gits
+ 1075  git pull
+ 1076  git log
+ 1077  git checkout c99f5d4629a4e6e8df66253096faeccc3d1ecb47
+ 1078  git log
+ 1079  git status
+ 1080  git reflog
+ 1081  git log
+ 1082  git st
+ 1083  git add -u
+ 1084  git st
+ 1085  git commit -m "my-merge"
+ 1086  git branch merge-i-dont-want
+ 1087  git branch
+ 1088  git log merge-i-dont-want 
+ 1089  git log
+ 1090  git reset --hard c99f5d
+ 1091  git status
+ 1092  git cherry -v origin
+ 1093  git reflog
+ 1094  gr
+ 1095  history
