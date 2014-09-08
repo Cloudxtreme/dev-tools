@@ -1,0 +1,17 @@
+$ brew install mongodb
+==> Downloading https://downloads.sf.net/project/machomebrew/Bottles/mongodb-2.6.4_1.mavericks.bottle.1.tar.gz
+######################################################################## 100.0%
+==> Pouring mongodb-2.6.4_1.mavericks.bottle.1.tar.gz
+==> Caveats
+To have launchd start mongodb at login:
+    ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
+Then to load mongodb now:
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
+Or, if you don't want/need launchctl, you can just run:
+    mongod --config /usr/local/etc/mongod.conf
+Error: Failed to install plist file
+==> Summary
+🍺  /usr/local/Cellar/mongodb/2.6.4_1: 17 files, 320M
+
+saket.kumar@c304955 ~/Projects/connected-boiler/connected-boiler-listener-groovy 
+$ mongo
