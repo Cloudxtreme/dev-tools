@@ -1,0 +1,22 @@
+#!/bin/bash
+if [[ -z $SSH_AGENT_PID ]]; then
+   echo "Starting a new agent"
+   eval $(ssh-agent)
+else
+   kill -0 $SSH_AGENT_PID &>/dev/null
+   if [[ $? -ne 0 ]]; then
+      echo "Agent is dead; restarting"
+      unset SSH_AGENT_PID
+      . jump
+   else
+      echo "Agent is running with pid $SSH_AGENT_PID"
+   fi
+fi
+
+ssh-add -l &>/dev/null
+if [[ $? -ne 0 ]]; then
+   echo "Adding key"
+   ssh-add -k
+else
+   echo "Key is present"
+fi
